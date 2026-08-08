@@ -24,7 +24,7 @@ export const ShareRecipeModal: React.FC<ShareRecipeModalProps> = ({
   const [isGeneratingImage, setIsGeneratingImage] = useState(false);
   const cardRef = useRef<HTMLDivElement>(null);
 
-  const shareableUrl = 'https://PantryPal-recipe.vercel.app';
+  const shareableUrl = 'https://pantry-pal-recipe.vercel.app';
 
   // Formatted summary variations
   const getSocialSummary = (): string => {
