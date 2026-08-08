@@ -1,0 +1,49 @@
+{
+  "entities": {
+    "users": {
+      "title": "Users",
+      "description": "User profiles, pantry items, favorite recipes, shopping list, and meal plan",
+      "type": "object",
+      "properties": {
+        "email": { "type": "string" },
+        "firstName": { "type": "string" },
+        "lastName": { "type": "string" },
+        "phone": { "type": "string" },
+        "avatarUrl": { "type": "string" },
+        "dietaryPreferences": { "type": "array", "items": { "type": "string" } },
+        "pantryItems": { "type": "array", "items": { "type": "string" } },
+        "favoriteIds": { "type": "array", "items": { "type": "string" } },
+        "shoppingList": { "type": "array", "items": { "type": "string" } },
+        "mealPlan": { "type": "object" },
+        "updatedAt": { "type": "string" }
+      },
+      "required": ["email"]
+    },
+    "feedback_submissions": {
+      "title": "Feedback Submissions",
+      "description": "Feedback and bug report submissions from users",
+      "type": "object",
+      "properties": {
+        "type": { "type": "string" },
+        "category": { "type": "string" },
+        "email": { "type": "string" },
+        "message": { "type": "string" },
+        "recipientEmail": { "type": "string" },
+        "status": { "type": "string" },
+        "createdAt": { "type": "string" }
+      },
+      "required": ["type", "category", "message"]
+    }
+  },
+  "firestore": {
+    "/users/{userId}": {
+      "schema": { "$ref": "#/entities/users" },
+      "description": "User profile document containing user preferences and saved pantry items"
+    },
+    "/feedback_submissions/{submissionId}": {
+      "schema": { "$ref": "#/entities/feedback_submissions" },
+      "description": "Collection of user feedback and bug reports"
+    }
+  }
+}
+

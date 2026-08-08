@@ -1,0 +1,6 @@
+{
+  "name": "PantryPal MVP",
+  "description": "Ingredient-first recipe matcher that answers 'What can I cook right now?' with instant recipe ranking, persistent pantry, and favorites filtering.",
+  "requestFramePermissions": ["microphone"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

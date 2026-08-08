@@ -1,0 +1,214 @@
+@import "tailwindcss";
+
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .gold-scrollbar::-webkit-scrollbar {
+    width: 4px;
+  }
+  .gold-scrollbar::-webkit-scrollbar-track {
+    background: #161513;
+  }
+  .gold-scrollbar::-webkit-scrollbar-thumb {
+    background: #2A2724;
+    border-radius: 4px;
+  }
+  .gold-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #D4AF37;
+  }
+}
+
+@keyframes shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+.animate-shimmer {
+  animation: shimmer 1.8s infinite;
+}
+
+/* High Contrast Accessibility Themes Overrides */
+
+/* 1. True Black OLED High Contrast (hc-dark) */
+[data-theme="hc-dark"] {
+  background-color: #000000 !important;
+  color: #ffffff !important;
+}
+[data-theme="hc-dark"] .bg-\[\#121212\] {
+  background-color: #000000 !important;
+}
+[data-theme="hc-dark"] .bg-\[\#161513\] {
+  background-color: #050505 !important;
+}
+[data-theme="hc-dark"] .bg-\[\#1A1918\] {
+  background-color: #0d0d0d !important;
+}
+[data-theme="hc-dark"] .bg-\[\#1E1D1B\] {
+  background-color: #141414 !important;
+}
+[data-theme="hc-dark"] .bg-\[\#23211E\] {
+  background-color: #1a1a1a !important;
+}
+[data-theme="hc-dark"] .text-\[\#F5F2EB\] {
+  color: #ffffff !important;
+}
+[data-theme="hc-dark"] .text-\[\#C2BCB2\] {
+  color: #e5e5e5 !important;
+}
+[data-theme="hc-dark"] .text-\[\#A39C90\] {
+  color: #cccccc !important;
+}
+[data-theme="hc-dark"] .text-\[\#8A8275\] {
+  color: #aaaaaa !important;
+}
+[data-theme="hc-dark"] .border-\[\#2A2724\] {
+  border-color: #555555 !important;
+}
+[data-theme="hc-dark"] .text-\[\#D4AF37\] {
+  color: #ffd700 !important;
+}
+
+/* 2. Crisp High Contrast Light Mode (hc-light) */
+[data-theme="hc-light"] {
+  background-color: #ffffff !important;
+  color: #0f172a !important;
+  color-scheme: light;
+}
+[data-theme="hc-light"] .bg-\[\#121212\] {
+  background-color: #ffffff !important;
+}
+[data-theme="hc-light"] .bg-\[\#161513\] {
+  background-color: #f8fafc !important;
+}
+[data-theme="hc-light"] .bg-\[\#1A1918\] {
+  background-color: #ffffff !important;
+}
+[data-theme="hc-light"] .bg-\[\#1E1D1B\] {
+  background-color: #f1f5f9 !important;
+}
+[data-theme="hc-light"] .bg-\[\#23211E\] {
+  background-color: #e2e8f0 !important;
+}
+[data-theme="hc-light"] .text-\[\#F5F2EB\] {
+  color: #0f172a !important;
+}
+[data-theme="hc-light"] .text-\[\#C2BCB2\] {
+  color: #334155 !important;
+}
+[data-theme="hc-light"] .text-\[\#A39C90\] {
+  color: #475569 !important;
+}
+[data-theme="hc-light"] .text-\[\#8A8275\] {
+  color: #64748b !important;
+}
+[data-theme="hc-light"] .border-\[\#2A2724\] {
+  border-color: #cbd5e1 !important;
+}
+[data-theme="hc-light"] .text-\[\#D4AF37\] {
+  color: #b48a18 !important;
+}
+
+/* 3. Vision-Friendly Cobalt & Amber (hc-cobalt) */
+[data-theme="hc-cobalt"] {
+  background-color: #0b132b !important;
+  color: #ffffff !important;
+}
+[data-theme="hc-cobalt"] .bg-\[\#121212\] {
+  background-color: #0b132b !important;
+}
+[data-theme="hc-cobalt"] .bg-\[\#161513\] {
+  background-color: #1c2541 !important;
+}
+[data-theme="hc-cobalt"] .bg-\[\#1A1918\] {
+  background-color: #1c2541 !important;
+}
+[data-theme="hc-cobalt"] .bg-\[\#1E1D1B\] {
+  background-color: #2a3a5e !important;
+}
+[data-theme="hc-cobalt"] .bg-\[\#23211E\] {
+  background-color: #3a506b !important;
+}
+[data-theme="hc-cobalt"] .text-\[\#F5F2EB\] {
+  color: #ffffff !important;
+}
+[data-theme="hc-cobalt"] .text-\[\#C2BCB2\] {
+  color: #e2e8f0 !important;
+}
+[data-theme="hc-cobalt"] .text-\[\#A39C90\] {
+  color: #cbd5e1 !important;
+}
+[data-theme="hc-cobalt"] .text-\[\#8A8275\] {
+  color: #94a3b8 !important;
+}
+[data-theme="hc-cobalt"] .border-\[\#2A2724\] {
+  border-color: #3a506b !important;
+}
+[data-theme="hc-cobalt"] .text-\[\#D4AF37\] {
+  color: #ffb703 !important;
+}
+
+/* Physical Kitchen Workspace Print-Friendly Formatting */
+@media print {
+  @page {
+    margin: 10mm 12mm;
+    size: portrait;
+  }
+
+  body, html {
+    background-color: #ffffff !important;
+    color: #111111 !important;
+    font-size: 11pt !important;
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif !important;
+  }
+
+  /* Hide all non-printable interactive UI elements */
+  header,
+  footer,
+  aside,
+  nav,
+  button,
+  .no-print {
+    display: none !important;
+  }
+
+  /* Strip dark background surfaces for clean ink-saving paper printing */
+  div, section, main, article {
+    background-color: transparent !important;
+    color: #111111 !important;
+    border-color: #d1d5db !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  /* High contrast text color overrides for physical paper readability */
+  h1, h2, h3, h4, p, span, li, label, strong, b {
+    color: #111111 !important;
+  }
+
+  .text-\[\#D4AF37\],
+  .text-\[\#E5C158\],
+  .text-\[\#E6A135\] {
+    color: #7c5e10 !important;
+  }
+
+  /* Images scale cleanly for paper */
+  img {
+    max-height: 180px !important;
+    object-fit: cover !important;
+    border: 1px solid #e5e7eb !important;
+    border-radius: 8px !important;
+  }
+
+  /* Prevent page cuts inside list items and steps */
+  li, tr, .break-inside-avoid {
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
+  }
+}
+
