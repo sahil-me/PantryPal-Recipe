@@ -134,26 +134,40 @@ async function startServer() {
     const { id } = req.params;
     const apiKey = process.env.SPOONACULAR_API_KEY;
 
-    // Check if ID is from Spoonacular (e.g., sp-716429 or numeric)
-    const isSpoonacularId = id.startsWith('sp-') || /^\d+$/.test(id);
-    const cleanId = id.replace(/^sp-/, '');
+    const idMatch = /^(?:sp-)?(\d+)$/.exec(id);
+    const cleanId = idMatch ? Number(idMatch[1]) : null;
 
-    if (isSpoonacularId && apiKey && apiKey.trim()) {
+    // Accept only numeric Spoonacular recipe IDs,
+    // optionally prefixed with "sp-".
+    if (cleanId !== null && Number.isSafeInteger(cleanId) && apiKey?.trim()) {
+
       try {
-        const infoUrl = `https://api.spoonacular.com/recipes/${cleanId}/information?includeNutrition=true&apiKey=${apiKey.trim()}`;
-        const response = await fetch(infoUrl);
+
+        const url = new URL(
+          `https://api.spoonacular.com/recipes/${cleanId}/information`
+        );
+
+        url.searchParams.set('includeNutrition', 'true');
+        url.searchParams.set('apiKey', apiKey.trim());
+
+        const response = await fetch(url.toString());
+
         if (response.ok) {
           const raw = await response.json();
           const recipe = transformSpoonacularRecipe(raw);
           return res.json({ success: true, source: 'spoonacular', recipe });
         }
+          
       } catch (err) {
-        console.warn('[Spoonacular Detail Fetch Error]:', err);
-      }
+          console.warn('[Spoonacular Detail Fetch Error]:', err);
+        }
     }
 
     // Fallback to local sample recipes
-    const localRecipe = SAMPLE_RECIPES.find(r => r.id === id || r.id === `sp-${cleanId}`);
+    const localRecipe = SAMPLE_RECIPES.find(
+      r => r.id === id || r.id === `sp-${cleanId}`
+    );
+
     if (localRecipe) {
       return res.json({ success: true, source: 'local', recipe: localRecipe });
     }
