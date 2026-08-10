@@ -9,10 +9,9 @@ import { BLOCKED_INGREDIENTS, isBlockedRecipe } from './src/utils/restrictionUti
 
 dotenv.config();
 
-async function startServer() {
-  const app = express();
-  const PORT = 3000;
+const app = express();
 
+async function startServer() {
   app.use(express.json());
 
   // Health check endpoint
@@ -443,10 +442,8 @@ CRITICAL RULES & RESPONSE QUALITY REQUIREMENTS:
       res.sendFile(path.join(distPath, 'index.html'));
     });
   }
-
-  app.listen(PORT, '0.0.0.0', () => {
-    console.log(`[PantryPal Server] Running on http://0.0.0.0:${PORT}`);
-  });
 }
 
-startServer();
+export const serverReady = startServer();
+
+export default app;
