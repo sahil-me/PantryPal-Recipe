@@ -1,3 +1,8 @@
-## Run Locally
+# 🍳 PantryPal - Recipe 🥗
 
-**Prerequisites:**  Node.js
+
+
+> 🎥 PantryPal Demonstration!
+
+---
+
