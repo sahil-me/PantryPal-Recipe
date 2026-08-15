@@ -115,58 +115,193 @@ PantryPal-Recipe/
 
 ## Tech Stack
 
-
+| Technology | Purpose |
+|------------|---------|
+| **TypeScript** | Primary programming language |
+| **React** | Frontend UI framework |
+| **Vite** | Development server and production build tool |
+| **Tailwind CSS** | Utility-first CSS framework for styling |
+| **Lucide React** | Icon library for the user interface |
+| **Motion** | UI animations and transitions |
+| **Node.js** | Server-side JavaScript runtime |
+| **Express** | Server-side API layer for external service requests |
+| **Firebase Authentication** | User authentication with Email/Password and Google Sign-In |
+| **Cloud Firestore** | Cloud database for user-specific application data |
+| **Spoonacular API** | Recipe and ingredient data |
+| **Google Gemini API** | AI-powered recipe assistance |
+| **Vitest** | Unit and application testing |
+| **Git** | Version control |
+| **GitHub** | Source code hosting and collaboration |
+| **Vercel** | Production deployment and hosting |
+| **Bun** | Dependency management and lockfile |
+| **Google AI Studio** | AI-assisted application development |
 
 ---
 
 ## Application Workflow
 
+**PantryPal** follows a pantry-first workflow that takes users from ingredient selection to recipe discovery, preparation, and meal planning.
 
+1️⃣ **Authentication and User Session**
+
+- Users can continue as guests or create an account using **Email/Password** or **Google Sign-In**.
+- Authenticated users can persist their pantry items, favorite recipes, meal plans, and preferences using **Firebase Authentication** and **Cloud Firestore**.
+
+2️⃣ **Ingredient Selection and Pantry Management**
+
+- Users enter ingredients through the ingredient search interface.
+- The application provides ingredient suggestions to make selection faster.
+- Authenticated users can load ingredients from their **saved pantry**.
+- Users can add, edit, remove, and manage ingredients in their pantry.
+
+3️⃣ **Ingredient-to-Recipe Matching**
+
+- The selected ingredients are sent to the server-side API for recipe search.
+- The backend retrieves recipe data from the **Spoonacular API**.
+- Recipes are evaluated based on the ingredients available to the user.
+- Results are ranked according to their **match percentage**, helping users identify recipes they can make with the ingredients they already have.
+
+4️⃣ **Recipe Discovery and Filtering**
+
+- Matching recipes are displayed as recipe cards with relevant information such as match percentage, meal category, preparation time, and difficulty.
+- Users can refine results using available filters such as:
+  - **Meal Type**
+  - **Dietary Preferences**
+  - **Cooking Time**
+  - **Match Criteria**
+- This allows users to quickly narrow the results to recipes that fit their requirements.
+
+5️⃣ **Detailed Recipe View**
+
+- Selecting a recipe opens its detailed recipe view.
+- Users can compare available ingredients with the ingredients required by the recipe.
+- Missing ingredients can be identified and added to the shopping list.
+- Users can adjust serving sizes and view nutritional information.
+- The recipe view also provides step-by-step cooking instructions.
+
+6️⃣ **AI-Powered Recipe Assistant**
+
+- Users can access the **Google Gemini-powered recipe assistant** while viewing a recipe.
+- The assistant uses the recipe context to provide cooking-related guidance.
+- Users can ask questions about ingredient substitutions, recipe modifications, preparation steps, and other cooking-related advice.
+
+7️⃣ **Smart Shopping List**
+
+- Missing ingredients from a recipe can be added directly to the **shopping list**.
+- Users can manage the list by checking off purchased items and adding or removing ingredients as needed.
+
+8️⃣ **Favorites and Weekly Meal Planner**
+
+- Users can save recipes to their **Favorites** for quick access later.
+- The **Weekly Meal Planner** allows users to assign recipes to specific days and meal slots throughout the week.
+- Saved favorites and meal plans are synchronized for authenticated users through **Cloud Firestore**.
 
 ---
 
 ## Screenshots
 
+### Recipe Discovery
 
+<img width="1366" alt="PantryPal Recipe Discovery" src="" />
+
+### Ingredient Matching
+
+<img width="1366" alt="PantryPal Ingredient Matching" src="" />
+
+### Recipe Results
+
+<img width="1366" alt="PantryPal Recipe Results" src="" />
+
+### Favorites
+
+<img width="1366" alt="PantryPal Favorites" src="" />
+
+### My Pantry
+
+<img width="1366" alt="PantryPal My Pantry" src="" />
+
+### Weekly Planner
+
+<img width="1366" alt="PantryPal Weekly Planner" src="" />
 
 ---
 
 ## AI-Assisted Development
 
+**PantryPal** was initially developed with the assistance of **Google AI Studio** and **Gemini** during the early stages of the project.
 
+AI assistance was used to support areas such as application structure, component development, UI implementation, debugging, and development guidance. The generated suggestions and code were subsequently reviewed, modified, integrated, and tested as part of the development process.
+
+The final application reflects the project's implemented architecture, features, integrations, and deployment configuration, including **React**, **TypeScript**, **Firebase**, **Spoonacular API**, **Google Gemini API**, **Express**, and **Vercel**.
 
 ---
 
 ## Future Enhancements
 
+The following improvements could be considered in future iterations of **PantryPal**:
 
+- **Advanced Recipe Recommendations**: Improve recipe ranking and recommendations using user preferences, cooking history, and favorite recipes.
+- **Personalized Meal Recommendations**: Suggest weekly meal plans based on available pantry ingredients, dietary preferences, and previously saved recipes.
+- **Enhanced Pantry Intelligence**: Add ingredient quantity tracking, expiration dates, and notifications to help users reduce food waste.
+- **Improved Shopping List Management**: Add grocery categories, quantity tracking, and smarter grouping of missing ingredients.
+- **AI-Powered Personalization**: Expand the Gemini-powered assistant to provide more personalized recipe suggestions, meal planning, and cooking guidance.
+- **Recipe Collections**: Allow users to organize saved recipes into custom collections.
+- **Advanced Search and Filtering**: Introduce additional filters and more precise recipe discovery options.
+- **Performance Optimization**: Further optimize API requests, caching, and application loading performance.
+- **Accessibility Improvements**: Continue improving keyboard navigation, screen-reader support, and overall accessibility.
+- **Progressive Web App (PWA)**: Add PWA capabilities to provide an improved mobile experience and offline support where applicable.
 
 ---
 
 ## Resources
 
-
+[![React | Documentation](https://img.shields.io/badge/React-Documentation-61DAFB?style=for-the-badge&logo=react&logoColor=white)](https://react.dev/)
+[![TypeScript | Documentation](https://img.shields.io/badge/TypeScript-Documentation-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/docs/)
+[![Vite | Guide](https://img.shields.io/badge/Vite-Guide-646CFF?style=for-the-badge&logo=vite&logoColor=white)](https://vite.dev/guide/)
+[![Tailwind CSS | Documentation](https://img.shields.io/badge/Tailwind_CSS-Documentation-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)](https://tailwindcss.com/docs)
+[![Firebase | Documentation](https://img.shields.io/badge/Firebase-Documentation-FFCA28?style=for-the-badge&logo=firebase&logoColor=black)](https://firebase.google.com/docs)
+[![Spoonacular | API Documentation](https://img.shields.io/badge/Spoonacular-API_Documentation-5BAE45?style=for-the-badge)](https://spoonacular.com/food-api/docs)
+[![Google Gemini | Documentation](https://img.shields.io/badge/Google_Gemini-Documentation-4285F4?style=for-the-badge&logo=google&logoColor=white)](https://ai.google.dev/gemini-api/docs)
+[![Express | Documentation](https://img.shields.io/badge/Express-Documentation-000000?style=for-the-badge&logo=express&logoColor=white)](https://expressjs.com/)
+[![Vercel | Documentation](https://img.shields.io/badge/Vercel-Documentation-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://vercel.com/docs)
 
 ---
 
 ## Disclaimer
 
+**PantryPal - Recipe** is a recipe discovery and kitchen management application developed for learning, experimentation, and demonstration purposes.
 
+The application uses third-party services, including the **Spoonacular API**, **Firebase**, and **Google Gemini API**. Recipe information, images, AI-generated responses, authentication services, and other third-party content or functionality may be subject to the respective providers' terms of service, licenses, usage limits, and policies.
+
+PantryPal does not claim ownership of third-party recipe data, images, or other externally provided content. The availability, accuracy, and continued operation of third-party services are dependent on their respective providers.
+
+Users should review the applicable terms, licenses, and policies of third-party services when using PantryPal.
+
+The project is provided "as is" without warranties of any kind, to the extent permitted by applicable law.
 
 ---
 
 ## Contributing
 
+Contributions are welcome. Before submitting changes, please review:
 
+- [Contributing Guide](./CONTRIBUTING.md)
+- [Code of Conduct](./CODE_OF_CONDUCT.md)
+- [Security Policy](./SECURITY.md)
 
 ---
 
 ## License
 
+This project is licensed under the **Apache License 2.0**.
 
+See the [**LICENSE**](./LICENSE) file for details.
 
 ---
 
 ## Author
 
+[**Sahil Sharma**](https://github.com/sahil-me)
+
+Thank you for exploring **PantryPal - Recipe**. If you found the project useful, consider giving the repository a ⭐ to show your support.
 
