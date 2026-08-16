@@ -200,29 +200,69 @@ PantryPal-Recipe/
 
 ## Screenshots
 
+### Account Creation
+
+<img width="1366" alt="PantryPal Account Creation" src="https://github.com/user-attachments/assets/0c5fdf5c-5583-4dba-8fb7-ef5ee5c0010c" />
+
+### Firebase Authentication
+
+<img width="1366" alt="PantryPal Firebase Authentication" src="https://github.com/user-attachments/assets/c3e554f5-2eea-4c17-9342-83bc105e41b2" />
+
+### Firebase Cloud Firestore
+
+<img width="1366" alt="PantryPal Cloud Firestore Usage" src="https://github.com/user-attachments/assets/3eed2ac0-b7c7-4636-8ca1-f5ae0021c140" />
+
+<img width="1366" alt="PantryPal Cloud Firestore Rules Metrics" src="https://github.com/user-attachments/assets/cba53708-a7cd-45ba-8bc3-ee0a7470453a" />
+
+<img width="1366" alt="PantryPal Cloud Firestore Query Insights" src="https://github.com/user-attachments/assets/6a4af62a-38bd-4d9f-bb89-aa4f558d0860" />
+
+### Profile & Preferences
+
+<img width="1366" alt="PantryPal Profile and Preferences" src="https://github.com/user-attachments/assets/cbd240e4-9eb9-431e-972d-a900ad8eb87b" />
+
 ### Recipe Discovery
 
-<img width="1366" alt="PantryPal Recipe Discovery" src="" />
-
-### Ingredient Matching
-
-<img width="1366" alt="PantryPal Ingredient Matching" src="" />
-
-### Recipe Results
-
-<img width="1366" alt="PantryPal Recipe Results" src="" />
-
-### Favorites
-
-<img width="1366" alt="PantryPal Favorites" src="" />
+<img width="1366" alt="PantryPal Recipe Discovery" src="https://github.com/user-attachments/assets/b1c0c0a4-8381-41b8-a496-8a0878dbd3e3" />
 
 ### My Pantry
 
-<img width="1366" alt="PantryPal My Pantry" src="" />
+<img width="1366" alt="PantryPal My Pantry" src="https://github.com/user-attachments/assets/3096d9bd-d5c4-4071-97aa-22235e2b64c8" />
 
-### Weekly Planner
+### Recipe Results
 
-<img width="1366" alt="PantryPal Weekly Planner" src="" />
+<img width="1366" alt="PantryPal Recipe Results" src="https://github.com/user-attachments/assets/73dd70f5-c077-4532-a076-e92277180020" />
+
+### Recipe Overview
+
+<img width="1366" alt="PantryPal Recipe Overview" src="https://github.com/user-attachments/assets/1299fddd-b932-422d-bcc8-30a404e3728d" />
+
+### Spoonacular API
+
+<img width="1366" alt="PantryPal Spoonacular API Dashboard" src="https://github.com/user-attachments/assets/c56a0a33-72a0-4138-8d95-1a419d129824" />
+
+<img width="1366" alt="PantryPal Spoonacular API Usage" src="https://github.com/user-attachments/assets/3295e91e-36f5-49d7-aede-5782daf5717a" />
+
+### Smart Shopping List
+
+<img width="1366" alt="PantryPal Smart Shopping List" src="https://github.com/user-attachments/assets/552c5e08-8e71-42cc-b002-94837d30e98c" />
+
+### AI Recipe Assistant
+
+<img width="1366" alt="PantryPal AI Recipe Assistant" src="https://github.com/user-attachments/assets/e317b257-f0e3-40eb-a7c0-56086db7627b" />
+
+### Favorites
+
+<img width="1366" alt="PantryPal Favorites" src="https://github.com/user-attachments/assets/5f4c5042-a0b6-44a0-8d80-04322bf56e96" />
+
+### Weekly Meal Planner
+
+<img width="1366" alt="PantryPal Weekly Meal Planner" src="https://github.com/user-attachments/assets/78831fc0-baa1-45a4-ab5a-aa5970c6e33a" />
+
+### Account Deletion
+
+<img width="1366" alt="PantryPal Account Deletion Confirmation" src="https://github.com/user-attachments/assets/61e39b82-d613-478d-b789-e0e689930ea4" />
+
+<img width="1366" alt="PantryPal Firebase Authentication After Account Deletion" src="https://github.com/user-attachments/assets/38c0194e-e981-4995-bb72-37cc26e33fb1" />
 
 ---
 
